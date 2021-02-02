@@ -3,7 +3,7 @@ import { ScrollView, FlatList } from "react-native";
 import { Card, Text, ListItem } from "react-native-elements";
 import { PARTNERS } from "../shared/partners";
 
-function Mission(props) {
+const Mission = () => {
   return (
     <Card title="Our Mission">
       <Text>
@@ -17,7 +17,7 @@ function Mission(props) {
       </Text>
     </Card>
   );
-}
+};
 
 class About extends Component {
   constructor(props) {
