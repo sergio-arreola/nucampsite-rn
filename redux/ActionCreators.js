@@ -25,6 +25,19 @@ export const fetchComments = () => (dispatch) => {
     .catch((error) => dispatch(commentsFailed(error.message)));
 };
 
+export const postComment = (campsiteId, rating, author, text) => (dispatch) => {
+  const newComment = {
+    campsiteId,
+    rating,
+    author,
+    text,
+  };
+  newComment.date = new Date().toISOString();
+  setTimeout(() => {
+    dispatch(addComment(newComment));
+  }, 2000);
+};
+
 export const commentsFailed = (errMess) => ({
   type: ActionTypes.COMMENTS_FAILED,
   payload: errMess,
@@ -33,6 +46,11 @@ export const commentsFailed = (errMess) => ({
 export const addComments = (comments) => ({
   type: ActionTypes.ADD_COMMENTS,
   payload: comments,
+});
+
+export const addComment = (newComment) => ({
+  type: ActionTypes.ADD_COMMENT,
+  payload: newComment,
 });
 
 export const fetchCampsites = () => (dispatch) => {
