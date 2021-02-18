@@ -3,6 +3,7 @@
         "backcountry",
         "datetimepicker",
         "nucamp",
-        "persistor"
+        "persistor",
+        "userinfo"
     ]
 }
