@@ -4,9 +4,11 @@
         "datetimepicker",
         "firstname",
         "lastname",
+        "netinfo",
         "nucamp",
         "persistor",
         "userdata",
-        "userinfo"
+        "userinfo",
+        "wifi"
     ]
 }
